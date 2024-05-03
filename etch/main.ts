@@ -116,8 +116,12 @@ cluster.addEventListener("click", (e) => {
 
 gridContainer.addEventListener("mousedown", (e) => {
   e.preventDefault();
+  const target = e.target as HTMLElement;
   if (e.button === 0) {
     isLeftClickHeld = true;
+    if (target!.classList.contains("griditem")) {
+      target!.style.backgroundColor = currentColor;
+    }
   }
 });
 gridContainer.addEventListener("mouseup", (e) => {
