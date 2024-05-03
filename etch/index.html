@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Etcher</title>
+  </head>
+  <body>
+    <div class="info-cluster mx-auto max-w-[768px] text-center">
+      <p id="grid-readable" class="py-2">Grid size: 24x24</p>
+      <div class="mx-auto flex max-w-[768px] justify-center gap-4 py-4">
+        <input
+          type="range"
+          id="grid-size"
+          name="grid-size"
+          min="2"
+          max="100"
+          value="24"
+        />
+        <button
+          type="button"
+          id="confirm-button"
+          class="rounded-md bg-slate-200 px-3 py-1 text-slate-800 transition-colors hover:bg-slate-300 active:bg-slate-500 active:text-slate-200"
+        >
+          Confirm
+        </button>
+        <button
+          type="button"
+          id="refresh-button"
+          class="rounded-md bg-slate-200 px-3 py-1 text-slate-800 transition-colors hover:bg-slate-300 active:bg-slate-500 active:text-slate-200"
+        >
+          New colors
+        </button>
+      </div>
+      <div class="flex max-w-[768px] flex-row py-3">
+        <div class="flex flex-col justify-center px-5">
+          <h3 class="">Active color:</h3>
+          <div
+            class="mx-auto mt-2 min-h-8 min-w-8 max-w-8 rounded-md bg-red-800"
+            id="active-color"
+          ></div>
+        </div>
+        <div class="flex-grow">
+          <h3 class="mb-2">Colors:</h3>
+          <div
+            class="flex flex-row justify-center gap-4"
+            id="color-cluster"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="container" draggable="false"></div>
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

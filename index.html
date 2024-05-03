@@ -7,7 +7,28 @@
     <title>JavaScript Basics</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <!-- <div id="app">app</div> -->
+    <div class="tab-container">
+      <ul class="tab-header">
+        <li class="default-tab">Default</li>
+        <li>Tab 2</li>
+        <li>Tab 3</li>
+      </ul>
+      <ul class="tabs">
+        <li class="tab-container">
+          <ul class="tab-header">
+            <li>Nested 1</li>
+            <li>Nested 2</li>
+          </ul>
+          <ul class="gator-tabs">
+            <li class="gator-tab">Eggs 1</li>
+            <li class="gator-tab">Eggs 2</li>
+          </ul>
+        </li>
+        <li class="gator-tab">Tab 1</li>
+        <li class="gator-tab">Tab 2</li>
+      </ul>
+    </div>
+    <!-- <script type="module" src="/src/main.ts"></script> -->
   </body>
 </html>

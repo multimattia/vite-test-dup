@@ -1,6 +1,6 @@
-export function setupAlert(element: HTMLButtonElement) {
-//   const setCounter = (count: number) => {
-//     element.innerHTML = `count is ${counter}`
-//   }
-  element.addEventListener('click', () => alert("Hello, world!"))
+export function buttonSetup(
+  element: HTMLButtonElement,
+  cb: (ev: MouseEvent) => void
+) {
+  element.addEventListener("click", cb);
 }

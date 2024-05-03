@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Tabs</title>
+  </head>
+  <body>
+    <div class="tabs-container flex flex-col">
+      <ul class="tab-header flex flex-wrap gap-6 p-2">
+        <li class="default-tab cursor-pointer border-2 border-black p-2">
+          Default
+        </li>
+        <li class="cursor-pointer border-2 border-black p-2">Tab 2</li>
+        <li class="cursor-pointer border-2 border-black p-2">Tab 3</li>
+      </ul>
+      <ul class="tabs">
+        <li class="tabs-container flex flex-col">
+          <ul class="tab-header flex flex-wrap gap-6 p-2">
+            <li class="default-tab cursor-pointer border-2 border-black p-2">
+              Nested 1 contents
+            </li>
+            <li class="cursor-pointer border-2 border-black p-2">
+              Nested 2 contents
+            </li>
+          </ul>
+          <ul class="tabs">
+            <li class="tab">Nested Eggs 1</li>
+            <li class="tab">Nested Eggs 2</li>
+          </ul>
+        </li>
+        <li class="tab">Tab 2 contents</li>
+        <li class="tab default-tab">Tab 3 contents</li>
+        <li class="tab">Tab 4 contents</li>
+      </ul>
+    </div>
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

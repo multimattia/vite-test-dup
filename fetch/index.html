@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fetch</title>
+  </head>
+  <body>
+    <div class="mx-auto my-3 flex max-w-screen-md flex-col">
+      <div class="flex flex-row justify-between gap-3">
+        <button
+          class="geolocate mx-auto my-3 min-h-8 min-w-36 max-w-36 rounded-sm bg-slate-300 transition-all hover:bg-slate-400"
+        >
+          Geolocate
+        </button>
+        <div class="flex flex-col">
+          <input
+            class="lat-input bg-slate-50 py-2"
+            type="text"
+            placeholder="Latitude"
+          />
+          <input
+            class="long-input bg-slate-50 py-2"
+            type="text"
+            placeholder="Longitude"
+          />
+        </div>
+      </div>
+
+      <label for="borough-select">Choose a borough:</label>
+      <select name="boroughs" id="borough-select">
+        <option value="">Choose a borough</option>
+        <option value="Bronx">Bronx</option>
+        <option value="Queens">Queens</option>
+        <option value="Manhattan">Manhattan</option>
+        <option value="Brooklyn">Brooklyn</option>
+      </select>
+
+      <button
+        class="fetch mx-auto my-3 min-h-8 min-w-36 max-w-36 rounded-sm bg-slate-300 transition-all hover:bg-slate-400"
+      >
+        Fetch
+      </button>
+    </div>
+    <div class="container mx-auto flex max-w-screen-md flex-col">
+      <h1 class="loading hidden font-mono">Loading...</h1>
+    </div>
+    <script type="module" src="main.ts"></script>
+    <script type="module" src="location.ts"></script>
+  </body>
+</html>

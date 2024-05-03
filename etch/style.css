@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  margin: auto;
+  width: 800px;
+  height: 800px;
+}
+
+.gridrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.griditem {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: gainsboro;
+}
